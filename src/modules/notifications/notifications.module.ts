@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AuthModule } from '../shared/auth/auth.module';
 import { SubscriptionsModule } from '../subscriptions/subscriptions.module';
+import { UserModule } from '../users/user.module';
 import { GetNotificationsUseCase } from './application/use-cases/get-notifications.use-case';
 import { MarkAsReadUseCase } from './application/use-cases/mark-as-read.use-case';
 import { MarkAllAsReadUseCase } from './application/use-cases/mark-all-as-read.use-case';
@@ -10,7 +11,7 @@ import { NotificationController } from './infrastructure/controllers/notificatio
 import { SQLiteNotificationRepository } from './infrastructure/repositories/notification.sqlite.repository';
 
 @Module({
-    imports: [AuthModule, SubscriptionsModule],
+    imports: [AuthModule, SubscriptionsModule, UserModule],
     controllers: [NotificationController],
     providers: [
         {
