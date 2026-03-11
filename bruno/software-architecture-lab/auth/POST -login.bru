@@ -1,0 +1,23 @@
+meta {
+  name: POST /login
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "reader",
+    "password": "reader"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

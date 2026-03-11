@@ -1,0 +1,27 @@
+meta {
+  name: POST /posts
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/posts
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlNTE5MjBlYi0wNDI0LTQxOWEtYWU3Zi1kNDlhODE3MmFiMjciLCJpZCI6ImU1MTkyMGViLTA0MjQtNDE5YS1hZTdmLWQ0OWE4MTcyYWIyNyIsInJvbGUiOiJyZWFkZXIiLCJ1c2VybmFtZSI6InJlYWRlciIsInBhc3N3b3JkIjoicmVhZGVyIiwiaWF0IjoxNzcxNDk5MjMwLCJleHAiOjE3NzE1MDI4MzB9.PSYJkVFP65SinMQHDYwJpguhMPKf0uFmIThMUmpMkuE
+}
+
+body:json {
+  {
+    "title": "My article 1",
+    "content": "Content of the article"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

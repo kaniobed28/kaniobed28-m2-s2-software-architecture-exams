@@ -1,0 +1,26 @@
+meta {
+  name: PATCH /posts/:id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3000/posts/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1b2ad8d0-2e4b-448f-aafe-63aafeac53c1
+}
+
+body:json {
+  {
+    "content": "Updated content"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

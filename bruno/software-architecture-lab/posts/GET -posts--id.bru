@@ -1,0 +1,24 @@
+meta {
+  name: GET /posts/:id
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/posts/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 243ab28d-d242-46de-bf2c-f6f6c198634c
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMzM5YWFiMC04YmRjLTRhNWUtYWY4NS1hMmI4ODUxYjQ4MTkiLCJpZCI6IjAzMzlhYWIwLThiZGMtNGE1ZS1hZjg1LWEyYjg4NTFiNDgxOSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoiZ2VyYWxkIiwicGFzc3dvcmQiOiJnZXJhbGQiLCJpYXQiOjE3NzE0OTgwNzIsImV4cCI6MTc3MTUwMTY3Mn0.fArePm9qGADpWHExv9OJgyn5zyNoAeZzZXSK_mBJcMk
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
